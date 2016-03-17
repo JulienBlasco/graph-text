@@ -1,6 +1,19 @@
 # graph-text
 
-##### 08/03 : 17:39
-J'ai modifié le fichier public_baselines parce qu'il ne compilait pas tout de suite. Il manquait deux trois trucs (genre une librairie à importer et un stemmer à définir avant de l'utiliser).
 
-J'ai créé un deuxième notebook que j'ai appelé first-feature-selection, il va comme son nom l'indique servir à faire une première exploration des features que l'on pourrait utiliser.
+### Liste des features à utiliser :
+* Features indépendants de la structure :
+  * Nombre de mots en commun dans le titre
+  * Nombre de mots en commun dans l'abstract (éventuellement avec tf-idf et/ou stemming)
+  * Ecart en années entre les dates de publication
+  * Nombre d'auteurs en commun
+* Features de structure :
+  * local edge/node connectivity entre les sommets
+  * nombre de voisins en commun (éventuellement normalisé par le nombre total de voisins de chaque sommet)
+  * Pagerank de chaque sommet
+  * Nombre de voisins de chaque sommet
+  * Appartenance ou non au même cluster
+* On compte également faire un graphe des auteurs pour intégrer des features supplémentaires :
+  * Pagerank (éventuellement pagerank maximal si plusieurs auteurs) de chaque auteur
+  * Nombre total de citations de chaque auteur
+  * Appartenance ou non au même cluster d'auteurs
