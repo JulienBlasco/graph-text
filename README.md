@@ -1,5 +1,6 @@
 # graph-text
 
+Attention: le PageRank n'a pas de sens pour un graphe non-orienté!! Trouver un Ersatz
 
 ### Liste des features à utiliser :
 * Features indépendants de la structure :
